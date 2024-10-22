@@ -10,7 +10,7 @@ dotenv.config();
 import cors from 'cors'
 
 mongoose
-  .connect("mongodb://localhost:27017/Ecommerce", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
